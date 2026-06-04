@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "252575324051",
+    "firebase_url": "https://pls-wrya-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pls-wrya",
+    "storage_bucket": "pls-wrya.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252575324051:android:9f9a0c074b950edfbb3a66",
+        "android_client_info": {
+          "package_name": "com.logic.pls"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXO4yQsazD23pImDbkVmnofGrwmCMt59w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,16 +1,26 @@
 name: Build APK
 on:
   push:
+<<<<<<< HEAD
     branches: [ master ]
+=======
+    branches: [ master, main ]
+
+>>>>>>> 080777b (flutter 2r2h)
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+<<<<<<< HEAD
+=======
+
+>>>>>>> 080777b (flutter 2r2h)
       - uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
+<<<<<<< HEAD
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.44.1'
@@ -19,4 +29,20 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: release-apk
+=======
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.0'
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --release --no-tree-shake-icons
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2R2H-release
+>>>>>>> 080777b (flutter 2r2h)
           path: build/app/outputs/flutter-apk/app-release.apk

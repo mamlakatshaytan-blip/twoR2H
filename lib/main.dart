@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -458,3 +459,33 @@ class _LocalGameScreenState extends State<LocalGameScreen> {
     );
   }
 }
+=======
+import 'package:firebase_core/firebase_core.dart';
+import 'services/prefs.dart';
+import 'utils/theme.dart';
+import 'screens/login_screen.dart';
+import 'screens/home_screen.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Prefs.init();
+  runApp(const PLSApp());
+}
+
+class PLSApp extends StatelessWidget {
+  const PLSApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final hasName = Prefs.username.isNotEmpty;
+    return MaterialApp(
+      title: '2R2H',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.dark,
+      home: hasName ? const HomeScreen() : const LoginScreen(),
+    );
+  }
+}
+>>>>>>> 080777b (flutter 2r2h)
